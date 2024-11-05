@@ -9,17 +9,18 @@ class WelcomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.symmetric(horizontal:Constants.horizontalScreenSpacing ),
+      padding: const EdgeInsets.symmetric(
+          horizontal: Constants.horizontalScreenSpacing),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Hi Hiwa!',
-            style:TextStyles.font30BlackBold,
+            style: TextStyles.font30BlackBold,
           ),
           Text(
             'Search for your favourite car in HI CARS.',
-            style:TextStyles.font14BlackBold,
+            style: TextStyles.font14BlackBold,
           )
         ],
       ),

@@ -1,3 +1,3 @@
 class Constants {
-  static const double horizontalScreenSpacing=20.0;
+  static const double horizontalScreenSpacing = 20.0;
 }

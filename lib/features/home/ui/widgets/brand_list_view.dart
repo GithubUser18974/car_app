@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BrandListView extends StatelessWidget {
   BrandListView({super.key});
- final List<Map<String, String>> brands = [
+  final List<Map<String, String>> brands = [
     {
       'path': "assets/images/bmw.png",
       'name': "BMW",
@@ -30,8 +30,8 @@ class BrandListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: brands.length,
         itemBuilder: (context, index) {
-          final brand=brands[index];
-          return BrandListItem( imagePath: brand["path"],title:brand['name']);
+          final brand = brands[index];
+          return BrandListItem(imagePath: brand["path"], title: brand['name']);
         },
       ),
     );

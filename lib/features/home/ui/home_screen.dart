@@ -1,5 +1,6 @@
 import 'package:car_app/core/theming/colour_manager.dart';
 import 'package:car_app/features/home/ui/widgets/brands_title_section.dart';
+import 'package:car_app/features/home/ui/widgets/top_car_list_view.dart';
 import 'package:car_app/features/home/ui/widgets/welcome_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,37 +35,33 @@ class HomeScreen extends StatelessWidget {
               'Home',
               style: TextStyle(fontWeight: FontWeight.bold),
             )),
-            actions:   [
+            actions: [
               Padding(
-                padding:const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: CircleAvatar(
                   radius: 24,
                   backgroundColor: ColourManager.orangeCard,
-                  backgroundImage:AssetImage('assets/images/man.png'),
+                  backgroundImage: AssetImage('assets/images/man.png'),
                 ),
               )
             ],
           ),
-          body: 
-             SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                 const WelcomeSection(),
-                  const CarCardExploreLatest(),
-                  const BrandsTitleSection(),
-                  SizedBox(height: 16,),
-                  BrandListView(),
-                  TopCarTitleSection(),
-                  CarListItem(imageUrl:"assets/images/car.png" ,
-                  title: "Car",
-                  description: "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
-
-                  ),
-                ],
-              ),
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const WelcomeSection(),
+                const CarCardExploreLatest(),
+                const BrandsTitleSection(),
+                SizedBox(
+                  height: 16,
+                ),
+                BrandListView(),
+                TopCarTitleSection(),
+                TopCarListView(),
+              ],
             ),
-          
+          ),
         ),
       ),
     );

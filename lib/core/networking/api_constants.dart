@@ -1,8 +1,9 @@
 class ApiConstants {
-  static const baseUrl= "https://hicars-api.mod-tech.org/api/Ecommerce/";
-  static const topCarsHome="/Ecommerce/ECarNewProductsP";
-  static const carDescribtion="Ecommerce/EProductById";
+  static const baseUrl = "https://hicars-api.mod-tech.org/api/Ecommerce/";
+  static const topCarsHome = "/Ecommerce/ECarNewProductsP";
+  static const carDescribtion = "Ecommerce/EProductById";
 }
+
 class ApiErrors {
   static const String badRequestError = "badRequestError";
   static const String noContent = "noContent";

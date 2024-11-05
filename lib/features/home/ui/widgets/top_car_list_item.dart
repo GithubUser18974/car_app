@@ -1,12 +1,12 @@
 import 'package:car_app/core/theming/colour_manager.dart';
 import 'package:flutter/material.dart';
 
-class CarListItem extends StatelessWidget {
+class TopCarListItem extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String description;
 
-  const CarListItem({
+  const TopCarListItem({
     required this.imageUrl,
     required this.title,
     required this.description,
@@ -81,7 +81,9 @@ class CarListItem extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        child: Text("Details", style: TextStyle(color: Colors.white,fontSize: 12)),
+                        child: Text("Details",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 12)),
                       ),
                     ),
                     SizedBox(width: 8), // Spacing between buttons
@@ -95,7 +97,9 @@ class CarListItem extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        child: Text("View car", style: TextStyle(color: Colors.white,fontSize: 12)),
+                        child: Text("View car",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 12)),
                       ),
                     ),
                   ],
