@@ -1,6 +1,6 @@
 class ApiConstants {
-  static const baseUrl = "https://hicars-api.mod-tech.org/api/Ecommerce/";
-  static const topCarsHome = "/Ecommerce/ECarNewProductsP";
+  static const baseUrl = "https://hicars-api.mod-tech.org/api/";
+  static const topCarsHome = "Ecommerce/ECarNewProductsP";
   static const carDescribtion = "Ecommerce/EProductById";
 }
 

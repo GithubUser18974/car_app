@@ -14,7 +14,7 @@ class _ApiService implements ApiService {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://hicars-api.mod-tech.org/api/Ecommerce/';
+    baseUrl ??= 'https://hicars-api.mod-tech.org/api/';
   }
 
   final Dio _dio;
@@ -36,7 +36,7 @@ class _ApiService implements ApiService {
     )
         .compose(
           _dio.options,
-          '/Ecommerce/ECarNewProductsP',
+          'Ecommerce/ECarNewProductsP',
           queryParameters: queryParameters,
           data: _data,
         )

@@ -35,7 +35,7 @@ class TopCarListItem extends StatelessWidget {
           // Image at the top
           ClipRRect(
             borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-            child: Image.asset(
+            child: Image.network(
               imageUrl,
               width: double.infinity,
               height: 120,
