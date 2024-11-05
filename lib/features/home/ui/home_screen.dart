@@ -5,6 +5,8 @@ import 'package:car_app/features/home/ui/widgets/welcome_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/routing/app_router.dart';
+import '../../../core/routing/routes.dart';
 import 'widgets/brand_list_item.dart';
 import 'widgets/brand_list_view.dart';
 import 'widgets/car_card_explore_latest.dart';
@@ -12,7 +14,8 @@ import 'widgets/top_car_list_item.dart';
 import 'widgets/top_car_title_section.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required this.appRouter});
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +66,8 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
+        initialRoute: Routes.homeScreen,
+        onGenerateRoute: appRouter.genrateRoute,
       ),
     );
   }
