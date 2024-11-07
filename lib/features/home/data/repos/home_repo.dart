@@ -6,13 +6,14 @@ import 'package:car_app/features/home/data/models/top_car_response_model/top_car
 class HomeRepo {
   final ApiService _ApiService;
   HomeRepo(this._ApiService);
-  Future<ApiResult<List<TopCarResponseModel>>> getTopCar()async{
-    try{
-        final reponse=await _ApiService.getTopCarData();
-        return ApiResult.success(reponse);
-    }catch(error){
-        return ApiResult.failure(ErrorHandler.handle(error));
+  Future<ApiResult<List<TopCarResponseModel>>> getTopCar() async {
+    try {
+      final reponse = await _ApiService.getTopCarData();
+      print(reponse[0].name);
+      print(reponse[0].link![0].link);
+      return ApiResult.success(reponse);
+    } catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
-
 }

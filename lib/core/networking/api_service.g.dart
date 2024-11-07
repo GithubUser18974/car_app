@@ -24,9 +24,15 @@ class _ApiService implements ApiService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<List<TopCarResponseModel>> getTopCarData() async {
+  Future<List<TopCarResponseModel>> getTopCarData({
+    int PageNumber = 1,
+    int PageSize = 20,
+  }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'pageNumber': PageNumber,
+      r'pageSize': PageSize,
+    };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<List<TopCarResponseModel>>(Options(

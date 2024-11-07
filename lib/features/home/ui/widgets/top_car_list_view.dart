@@ -1,6 +1,5 @@
 import 'package:car_app/features/home/data/models/top_car_response_model/top_car_response_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'top_car_list_item.dart';
 
@@ -9,21 +8,30 @@ class TopCarListView extends StatelessWidget {
   final List<TopCarResponseModel> topcCarData;
   @override
   Widget build(BuildContext context) {
-    
-    return SizedBox(
-      height: 250.h,
-      child: ListView.builder(
-        shrinkWrap: true,
-          itemCount: topcCarData.length,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) {
-            return TopCarListItem(
-              imageUrl: topcCarData[index].name??"Car Name",
-              title: topcCarData[index].link![0].link??"Car Image URL",
-              description:
-                  topcCarData[index].description??"Car Description",
-            );
-          }),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(topcCarData.length, (index) {
+          return TopCarListItem(
+            imageUrl: topcCarData[index].link![0].link ??
+                "https://d2xhox90di5ev3.cloudfront.net/81d0bafa-ce55-4e2a-9e77-f4a1df28ea1e",
+            title: topcCarData[index].name ?? "Car Name",
+            description: topcCarData[index].description ?? "Car Description",
+            price: topcCarData[index].price ?? 100000,
+          );
+        }),
+
+        // shrinkWrap: true,
+        // itemCount: topcCarData.length,
+        // itemBuilder: (context, index) {
+        //   return TopCarListItem(
+        //     imageUrl: topcCarData[index].link![0].link ??
+        //         "https://d2xhox90di5ev3.cloudfront.net/81d0bafa-ce55-4e2a-9e77-f4a1df28ea1e",
+        //     title: topcCarData[index].name ?? "Car Name",
+        //     description: topcCarData[index].description ?? "Car Description",
+        //   );
+        // }
+      ),
     );
   }
 }

@@ -13,16 +13,16 @@ class TopCarResponseModel {
   String? color;
   String? engineCapacity;
   String? milagesCounter;
-  int? kiloMeter;
-  int? horsePower;
-  int? cylinders;
+  double? kiloMeter;
+  double? horsePower;
+  double? cylinders;
   int? gearType;
   int? fuelType;
   int? showStatus;
   dynamic remark;
   int? vehicleType;
   String? phone;
-  int? price;
+  double? price;
   String? description;
   Company? company;
   Category? category;
@@ -60,23 +60,23 @@ class TopCarResponseModel {
     return TopCarResponseModel(
       id: json['id'] as int?,
       name: json['name'] as String?,
-      status: json['status'] as int?,
+      status: int.tryParse(json['status']?.toString() ?? ""),
       categoryId: json['categoryId'] as int?,
       brandId: json['brandId'] as int?,
       year: json['year'] as String?,
       color: json['color'] as String?,
       engineCapacity: json['engineCapacity'] as String?,
       milagesCounter: json['milagesCounter'] as String?,
-      kiloMeter: json['kiloMeter'] as int?,
-      horsePower: json['horsePower'] as int?,
-      cylinders: json['cylinders'] as int?,
-      gearType: json['gearType'] as int?,
-      fuelType: json['fuelType'] as int?,
-      showStatus: json['showStatus'] as int?,
+      kiloMeter: double.tryParse(json['kiloMeter']?.toString() ?? ""),
+      horsePower: double.tryParse(json['horsePower']?.toString() ?? ""),
+      cylinders: double.tryParse(json['cylinders']?.toString() ?? ""),
+      gearType: int.tryParse(json['cylinders']?.toString() ?? ""),
+      fuelType: int.tryParse(json['fuelType']?.toString() ?? ""),
+      showStatus: int.tryParse(json['showStatus']?.toString() ?? ""),
       remark: json['remark'] as dynamic,
-      vehicleType: json['vehicleType'] as int?,
+      vehicleType: int.tryParse(json['vehicleType']?.toString() ?? ""),
       phone: json['phone'] as String?,
-      price: json['price'] as int?,
+      price: double.tryParse(json['price']?.toString() ?? ""),
       description: json['description'] as String?,
       company: json['company'] == null
           ? null
